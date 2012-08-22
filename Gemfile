@@ -7,6 +7,9 @@ gem 'rails', '3.2.2'
 group :development do
   gem 'sqlite3'
 end
+group :production do
+  gem 'pg'
+end
 
 gem 'carrierwave'
 gem 'geocoder'
