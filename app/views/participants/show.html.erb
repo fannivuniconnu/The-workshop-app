@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @participant.name %>
+</p>
+
+<p>
+  <b>Twitter handle:</b>
+  <%= @participant.twitter_handle %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @participant.bio %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @participant.address %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @participant.comment %>
+</p>
+
+<p> 
+  <b>Picture:</b>
+<%= image_tag(@participant.picture_url, :width => 600) if @participant.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'Back', participants_path %>
